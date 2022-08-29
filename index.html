@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start Ur Day's</title>
+</head>
+<body>
+<!-- form  Login-->
+<div class="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8">
+    <!-- SIGN IN -->
+  <div class="max-w-lg mx-auto" id="formLogin">
+    <h1 class="text-2xl font-bold text-center text-indigo-600 sm:text-3xl">Get started today</h1>
+    <p class="max-w-md mx-auto mt-4 text-center text-gray-500">
+      Bagaimana Harimu hari ini?
+    </p>
+    <form action="" class="p-8 mt-6 mb-0 space-y-4 rounded-lg shadow-2xl">
+      <p class="text-lg font-medium">Sign In to your account</p> 
+      <div>
+        <label class="text-sm font-medium">Username</label>
+        <div class="relative mt-1">
+          <input
+            type="text"
+            class="w-full p-4 pr-12 text-sm border-gray-200 rounded-lg shadow-sm"
+            placeholder="Masukan Username"
+            id="unameLogin"
+            autofocus autocomplete="off"
+          />
+        </div>
+      </div>
+      <div>
+        <label class="text-sm font-medium">Password</label>
+        <div class="relative mt-1">
+          <input
+            type="password"
+            class="w-full p-4 pr-12 text-sm border-gray-200 rounded-lg shadow-sm"
+            placeholder="Enter password"
+            id="passLogin" 
+          />
+        </div>
+      </div>
+      <button class="block w-full px-5 py-3 text-sm font-medium text-white bg-indigo-600 rounded-lg" onclick="login()">
+        Login
+      </button>
+      <p class="text-sm text-center text-gray-500">
+        Belum punya akun?
+        <a class="small" href="#" id="btnDaftar" onclick="daftar('daftar')">Register dulu yuk</a>
+      </p>
+    </form>
+    <!-- SIGN IN END -->
+  </div>
+    <!-- SIGN IN END-->
+    <!-- SIGN UP -->
+  <div class="max-w-lg mx-auto" id="formDaftar">
+    <form action="" class="p-8 mt-6 mb-0 space-y-4 rounded-lg shadow-2xl">
+      <p class="text-lg font-medium">Sign Up to your account</p>
+      <div>
+        <label class="text-sm font-medium">Nama Lengkap</label>
+        <div class="relative mt-1">
+            <input
+            type="text"
+            class="w-full p-4 pr-12 text-sm border-gray-200 rounded-lg shadow-sm" 
+            placeholder="Nama Lengkap" 
+            id="namaDaftar" 
+            autocomplete="off" autofocus
+            />
+        </div>
+        <div>
+            <Select id="levelDaftar" class="w-full p-4 pr-12 text-sm border-gray-200 rounded-lg shadow-sm">
+                <option value="">-- Pilih Satu --</option>
+                <option value="Admin">Admin</option>
+                <option value="Basic">Basic</option>
+                <option value="Operator">Operator</option>
+                <option value="Mahasiswa">Mahasiswa</option>
+                <option value="Dosen">Dosen</option>
+            </Select>
+        </div>
+        <label class="text-sm font-medium">Username</label>
+        <div class="relative mt-1">
+          <input
+            type="text"
+            class="w-full p-4 pr-12 text-sm border-gray-200 rounded-lg shadow-sm"
+            placeholder="Masukan Username"
+            id="unameDaftar"
+            value="" 
+            autocomplete="off"
+          />
+        </div>
+      </div>
+      <div>
+        <label class="text-sm font-medium">Password</label>
+        <div class="relative mt-1">
+          <input
+            type="password"
+            class="w-full p-4 pr-12 text-sm border-gray-200 rounded-lg shadow-sm"
+            placeholder="Enter password"
+            id="passDaftar"
+            value="" 
+          />
+        </div>
+      </div>
+      <button type="submit" class="block w-full px-5 py-3 text-sm font-medium text-white bg-indigo-600 rounded-lg" onclick="daftarBaru()">
+        Register
+      </button>
+      <p class="text-sm text-center text-gray-500">
+        Sudah punya akun?
+        <a class="small" href="#" id="btnLogin" onclick="daftar('login')">Login di sini</a>
+      </p>
+    </form>
+  </div>
+    <!-- SIGN UP END -->
+</div>
+<!-- form login END -->
+<!-- Data Akun yang Login -->
+  <div id="content">
+    <div class="logout" onclick="logout()">
+      Logout
+    </div>
+    <section>
+        <h1>Selamat datang <p id="uname"></p>
+        </h1>
+        <p>Anda login sebagai <b id="lvl"></b></p>
+      </section>
+  </div>
+<!-- Data Akun yang Login END-->
+<script type="application/javascript" src="script.js"></script>
+</body>
+</html>
